@@ -1,2 +1,2 @@
 # WisBLOCK
-Applications for RAK WisbLOCK devices
+Applications for RAK WisBLOCK devices
