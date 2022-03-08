@@ -2,7 +2,7 @@
  * File: LoRaWAN_ENVII_Template.ino
  * 
  * This file gives a frame for sending ensor data via LoRaWAN
- * via WisBlock Core RAK11310 (RP2040 & SSX1262) 
+ * via WisBlock Core RAK11310 (RP2040 & SX1262) or RAK4631 (nRF52840 & SX1262)
  * and RAK1920 WisBlock Sensor Adapter Module w/ Grove, QwiiC & mikroE interfaces
  * 2022-03-01 Claus Kühnel info@ckuehnel.ch
  */
