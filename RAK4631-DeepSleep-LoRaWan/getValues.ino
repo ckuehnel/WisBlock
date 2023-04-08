@@ -1,5 +1,5 @@
 // Read ADC value for battery voltage and charge.
-// Raed SHTC3 for temperature and humidity inside enclosure
+// Read SHTC3 for temperature and humidity inside enclosure
 
 uint16_t batteryVoltage;
 uint8_t  batteryCharge;
