@@ -1,5 +1,5 @@
 /*
- * File RAK14014_Image.ino
+ * File RAK14014_Image_1.ino
  */
 
 #include <Adafruit_GFX.h>    // Core graphics library
@@ -39,7 +39,7 @@ void setup(void)
   delay(500);
 
   tft.fillScreen(ST77XX_BLACK);
-  drawBmp(&bmrose,0,0);
+  drawBmp(&bmopenweather,0,0);
 
 }
 
@@ -48,7 +48,7 @@ void loop()
   delay(2000);
   tft.fillScreen(ST77XX_BLACK);
   delay(1000);
-  drawBmp(&bmrose,0,0);
+  drawBmp(&bmopenweather,0,0);
 }
 
 static void drawBmp(const GUI_BITMAP *bmp , uint8_t x, uint8_t y) 
