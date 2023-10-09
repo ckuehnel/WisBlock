@@ -129,7 +129,7 @@ function lppDecode(bytes) {
 	}
 
 	var sensors = [];
-	var i = 3;
+	//var i = 3;
 	//var num = (bytes[2] << 16) + (bytes[3] << 8) + bytes[4];
 	//var sens_num = formatHex(num, 6);
 	//sensors.push({
