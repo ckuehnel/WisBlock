@@ -130,7 +130,7 @@ function lppDecode(bytes) {
 
 	var sensors = [];
 	var i = 5;
-	var num = (bytes[2] << 12) + (bytes[3] << 4) + bytes[4];  // converts 001f8 to 01f8, for example
+	var num = (bytes[2] << 12) + (bytes[3] << 4) + bytes[4];  // converts 001f08 to 01f8, for example
 	var sens_num = formatHex(num, 4);
 	sensors.push({
 		'channel': 0,
