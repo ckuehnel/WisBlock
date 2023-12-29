@@ -26,7 +26,7 @@ uint8_t data_array[8] = {0};
 char    arr[25];
 
 #define DEBUG 0       // DEBUG controls serial output
-#define SLEEPTIME 60  // Sleep time in seconds
+#define SLEEPTIME 300  // Sleep time in seconds
 
 // DEPG0213BNS800F41HP epaper marked on back-side
 // 2.13" EPD with SSD1680, width=250 pixels, heigh=122 pixels
@@ -77,7 +77,7 @@ void setup()
     Serial.printf("Creating timer failed.\r\n");
     return;
   }
-  // Set timer periode to 1 min and start timer
+  // Set timer period to 5 min and start the timer
   if (api.system.timer.start(RAK_TIMER_0, 1000 * SLEEPTIME , NULL) != true) 
   {
     Serial.printf("Starting timer failed.\r\n");
