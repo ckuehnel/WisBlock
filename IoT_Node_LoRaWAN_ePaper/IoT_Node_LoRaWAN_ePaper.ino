@@ -27,10 +27,6 @@ boolean RAK1901_ready = false;   // true, if RAK1901 was detected
 float RAK1901_temp, RAK1901_humi;   // Temp & Humi of SHTC3 (RAK1901)
 
 #define PIN_VBAT WB_A0
-#define VBAT_MV_PER_LSB (0.73242188F) // 3.0V ADC range and 12 - bit ADC resolution = 3000mV / 4096
-#define VBAT_DIVIDER_COMP (1.73)      // Compensation factor for the VBAT divider, depend on the board
-#define REAL_VBAT_MV_PER_LSB (VBAT_DIVIDER_COMP * VBAT_MV_PER_LSB)
-
 uint32_t vbat_pin = PIN_VBAT;
 
 float Voltage = 0.0;
@@ -38,7 +34,7 @@ float Voltage = 0.0;
 uint8_t data_array[8] = {0};
 char    arr[25];
 
-#define DEBUG 0       // DEBUG controls serial output
+#define DEBUG 0        // DEBUG controls serial output
 #define SLEEPTIME 300  // Sleep time in seconds
 
 // DEPG0213BNS800F41HP epaper marked on back-side
