@@ -1,22 +1,23 @@
 function decodeUplink(input) 
 {
   var value = (input.bytes[0]<<8 | input.bytes[1]);
-  var Vsol = value/1000;  // Solar  Cell voltage, units:V
-   
+  var core = "RAK" + String(value);  // RAK Core Modul
+     
   value = input.bytes[2]<<8 | input.bytes[3];
-  var Vbat= value/1000;   // LiPo battery voltage, units:V
+  var temp = value/10;   // Temperature, units:°C
   
-  value = input.bytes[4];
-  if(value===0)
-    distance = "LiPo battery discharging";
-  else if(value<20)
-    distance = "Solar buffered - LiPo battery charged";
+  value = input.bytes[4]<<8 | input.bytes[5];
+  var humi = value;   // Humidity, units: %rH
+
+  value = input.bytes[6]<<8 | input.bytes[7];
+  var vbat = value/1000;   // Battery voltage, units: V
   
   return {
     data: {
-      SolarCell: Vsol,
-      LiPoBattery: Vbat,
-      State: distance
+      Core: core,
+      Temperature: temp,
+      Humidity: humi,
+      Vbat: vbat
     },
     warnings: [],
     errors: []
