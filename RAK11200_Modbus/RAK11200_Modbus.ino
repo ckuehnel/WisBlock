@@ -29,9 +29,9 @@ void setup()
 {
   // WisBLOCK RAK5802 Power On
   pinMode(WB_IO2, OUTPUT);
-	digitalWrite(WB_IO2, HIGH);
+  digitalWrite(WB_IO2, HIGH);
 
-	Serial.begin(115200);
+  Serial.begin(115200);
   delay(2000); // wait for serial monitor
   Serial1.begin(9600,SERIAL_8N1);    //Data bit 8, check bit None, Stop bit 1
   while (!Serial1);
